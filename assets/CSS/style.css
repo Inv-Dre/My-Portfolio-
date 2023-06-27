@@ -1,0 +1,165 @@
+:root {
+    --title-colors: #c34be7;
+    --background-color1: #0c0b0b;   
+    --text: #01e5f5;
+    --background-color2: #2b3850;
+}
+ .header{
+    display: block;
+    width: auto;
+    height:auto;
+}
+.header h1{
+    font-size:50px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+.header ul{
+    text-align: right;
+    background-color: var(--background-color2) ;
+    
+}
+ .header li{
+    display:inline;
+    font-size:25px;
+    margin: 1%;
+   
+   
+}
+ a{
+    color: var(--text);
+    text-decoration: none;
+
+}
+ a:hover{
+    color:white;
+    font-size:90%;
+}
+
+a[href$="s"]::after{
+    content:'🪐';
+}
+a[href$='5']:hover::after{
+    content:': 555-555-5555';    
+}
+
+.header-img{
+    display:block;
+    width:300px;
+    height: auto;
+    border: 2px solid var(--background-color2);
+    margin-left: auto;
+    margin-right:auto
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height:auto;
+    padding:0px;
+    margin:0px;
+    color: var(--title-colors);
+    background-color:var(--background-color1);
+}
+
+body p{
+    margin-left: 10px;
+    font-size:20px;
+    color: var(--text)
+    
+}
+
+
+.section {
+    width: auto;
+    height:400px;
+    margin-top: 20px;
+    border-left: 5px solid var(--background-color2);
+    background-image: url(https://images.rawpixel.com/image_450/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTM2NjcxMC1pbWFnZS1rd3Z4eGVxcC5qcGc.jpg);
+
+
+}
+
+.section h2 {
+
+    text-align: left;  
+    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.section li{
+    list-style-type:none;
+    display:inline;
+    margin: 2%;
+    font-size:18px;
+}
+div img{
+    width:225px;
+    height:225px;
+    margin:1%
+}
+.first-app{
+    width: 250px;
+    height: 250px;
+}
+.section #my-contact{
+   height:100px;
+}
+
+
+
+@media screen and (max-width: 992px){
+    h1{
+        color: var(--text);
+    }
+    h2{
+        color:var(--text);
+    }
+    body p{ 
+       color:var(--title-colors);
+       font-size:15px;
+    }
+    a{
+        color:var(--title-colors)
+    }
+    .header ul{
+        text-align: center;
+        padding: 0%;
+        margin:0px;
+    }
+    div img{
+        width:175px;
+        height:175px;
+    }
+    .first-app{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 768px){
+    body{
+        background-color:var(--background-color2);
+    }
+    .header ul{
+        background-color: var(--background-color1);
+    }
+    p{
+        font-size: 12px;
+    }
+    div img{
+        width:125px;
+        height:125px;
+    }
+    .first-app{
+        width: 150px;
+        height: 150px;
+    }
+    #contact-mes{
+        height:100px;
+    }
+    #about-mes{
+        height:200px;
+    }
+}
