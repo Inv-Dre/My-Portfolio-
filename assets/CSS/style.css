@@ -1,3 +1,4 @@
+/* Use to make variables for the colors i used */
 :root {
     --title-colors: #c34be7;
     --background-color1: #0c0b0b;   
@@ -9,16 +10,19 @@
     width: auto;
     height:auto;
 }
+/* font, font size, and text position for the header class */
 .header h1{
     font-size:50px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
 }
+/* text moved to the right of the screen and background color of the nav  */
 .header ul{
     text-align: right;
     background-color: var(--background-color2) ;
     
 }
+/* make the list on the nav side by side, font size of nav bar,use margin to space of the items on nav */
  .header li{
     display:inline;
     font-size:25px;
@@ -26,23 +30,28 @@
    
    
 }
+/* make all anchor tags a certain color and remove the underline */
  a{
     color: var(--text);
     text-decoration: none;
 
 }
+/* turn all anchors white when the mouse is hovering over them */
  a:hover{
     color:white;
     font-size:90%;
 }
-
+/* add a planet icon behind every anchor tag that ends with an s */
 a[href$="s"]::after{
     content:'🪐';
 }
+/* make the phone number appear when the Phone number anchor tag is hovered over */
 a[href$='5']:hover::after{
     content:': 555-555-5555';    
 }
-
+/* use display block,margin-left,margin-right to center the picture */
+/* changed the width and height of the image to what i wanted */
+/* added a solid border with 2px width and a variable color */
 .header-img{
     display:block;
     width:300px;
@@ -52,7 +61,10 @@ a[href$='5']:hover::after{
     margin-right:auto
 
 }
-
+/* made the body into a flex box use flex direction to make everything line up in a column instead of on one line */
+/* gave auto width and height to make the page size depend on content */
+/* removed padding and margins so the page would touch the outside of the screen */
+/* color changes the color of the text in the body and background color is changing the background */
 body{
     display: flex;
     flex-direction: column;
@@ -63,7 +75,8 @@ body{
     color: var(--title-colors);
     background-color:var(--background-color1);
 }
-
+/* moving the the text to the right a little */
+/* fontsize and chnaged the color of the body paragraphs */
 body p{
     margin-left: 10px;
     font-size:20px;
@@ -71,7 +84,11 @@ body p{
     
 }
 
-
+/* made the width of everything with the section class match the page */
+/* made the height of every box in the class 400 px */
+/* removed any padding and margins from the boxes */
+/* added a border to the left side of each box */
+/* added a galaxy background image to the boxes */
 .section {
     width: auto;
     height:400px;
@@ -80,39 +97,48 @@ body p{
     border-left: 5px solid var(--background-color2);
     background-image: url(https://images.rawpixel.com/image_450/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTM2NjcxMC1pbWFnZS1rd3Z4eGVxcC5qcGc.jpg);
 }
-
+/* moved each h2 in the boxes to the left */
+/* made all h2s fontsize 40px */
+/* changed the font family */
 .section h2 {
 
     text-align: left;  
     font-size: 40px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
+/* removed bullets from all lists in the section class */
+/* made the list in the section class into a one horizontal list */
+/* put a 2% margin on the lists items moving them away from each other */
+/* changed the font size */
 .section li{
     list-style-type:none;
     display:inline;
     margin: 2%;
     font-size:18px;
 }
+/* changed the size of all imgs inside of a div */
+/* spaced them out by adding a margin */
 div img{
     width:225px;
     height:225px;
     margin:1%
 }
+/* changed the size of the picture of the first app only so it can be the biggest app */
 .first-app{
     width: 250px;
     height: 250px;
 }
+/* changed the size of the contact me box because it did not need to be as big as it was */
 #contact-mes{
    height:100px;
 }
+/* positioned the footer in the middle and changed the fontsize */
 footer{
     text-align: center;
     font-size: 20px;
 }
 
-
-
+/* all of the elements and classes will changed as the screen hit a width of 992 or lower to adjust with the screen size */
 @media screen and (max-width: 992px){
     h1{
         color: var(--text);
@@ -141,6 +167,7 @@ footer{
         height: 200px;
     }
 }
+/* all of the elements and classes will changed as the screen hit a width of 768 or lower to adjust with the screen size */
 @media screen and (max-width: 768px){
     body{
         background-color:var(--background-color2);
@@ -166,6 +193,7 @@ footer{
         height:200px;
     }
 }
+/* all of the elements and classes will changed as the screen hit a width of 480 or lower to adjust with the screen size */
 @media screen and (max-width: 480px){
     .section{
         height:150px
